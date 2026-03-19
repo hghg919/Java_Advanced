@@ -1,0 +1,21 @@
+
+public class Ex6_4 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		MyMath mm = new Mymath();
+	}
+
+}
+
+class MyMath {
+	long add (long a, long b) {
+		long result = a+ b;
+		return result;		
+	}
+	long subtract(long a, long b) {return a - b;}
+	long multply(long a, long b) {return a * b;}
+	double divide(double a, double b) {
+		return a / b;
+	}
+}
