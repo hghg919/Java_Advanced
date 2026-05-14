@@ -1,0 +1,59 @@
+import java.util.*;
+
+class Ex11_1 {
+	public static void main(String[] args) {
+		ArrayList list1 = new ArrayList(10);  //길이가 10인 ArrayList 생성
+		list1.add(new Integer(5));  // 혹은 list1.add(5); -> 오토박싱
+		list1.add(new Integer(4));
+		list1.add(new Integer(2));
+		list1.add(new Integer(0));
+		list1.add(new Integer(1));
+		list1.add(new Integer(3));
+
+		ArrayList list2 = new ArrayList(list1.subList(1,4)); 
+		print(list1, list2);
+        
+		//Collection:인터페이스, Collections:유틸클래스
+//		Collections.sort(list1);	// list1과 list2를 정렬한다.
+//		Collections.sort(list2);	// Collections.sort(List l)
+//		print(list1, list2);
+//
+//		System.out.println("list1.containsAll(list2):"
+//                            + list1.containsAll(list2));
+//
+//		list2.add("B");
+//		list2.add("C");
+//		list2.add(3, "A");   //인덱스 3에 A 추가, B,C는 뒤로 자리이동
+//		print(list1, list2);
+//
+//		list2.set(3, "AA");  //인덱스 3에 AA로 변경
+//		print(list1, list2);
+		
+		list1.add(0,"1");   //인덱스 0에 문자열 "1" 추가
+		
+		//indexOf()는 지정된객체의 위치(인덱스)를 알려준다.
+		System.out.println("index=" + list1.indexOf("1"));
+		System.out.println("index=" + list1.indexOf(1));
+		
+		list1.remove(0);   //인덱스 0에 있는 객체 제거, 자리이동 이루어짐
+		// list1.remove(new Integer(1));   //정수 1 제거
+//
+//		// list1에서 list2와 겹치는 부분만 남기고 나머지는 삭제한다. <교집합>
+//		System.out.println("list1.retainAll(list2):" + list1.retainAll(list2));
+//
+//		print(list1, list2);
+//
+//		//  list2에서 list1에 포함된 객체들을 삭제한다.
+//		for(int i= list2.size()-1; i >= 0; i--) {
+//			if(list1.contains(list2.get(i)))
+//				list2.remove(i);
+//		}
+//		print(list1, list2);
+	} // main의 끝
+
+	static void print(ArrayList list1, ArrayList list2) {
+		System.out.println("list1:"+list1);
+		System.out.println("list2:"+list2);
+		System.out.println();		
+	}
+} // class
